@@ -1,0 +1,166 @@
+body {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 95%;
+  min-height: 600px;
+  margin: auto; }
+  .container > nav {
+    height: 50px;
+    overflow: hidden; }
+    .container > nav > a,
+    .container > nav a:link,
+    .container > nav a:visited {
+      display: inline-block;
+      line-height: 50px;
+      text-decoration: none;
+      padding: 0 10px;
+      color: #3388FF; }
+    .container > nav a:hover {
+      font-weight: bold; }
+    .container > nav a.vis {
+      background-color: #ddd;
+      color: #333; }
+  .container .content {
+    border: 1px solid #ddd;
+    min-height: 600px;
+    padding: 0 30px 0 190px;
+    overflow: hidden;
+    min-width: 500px; }
+    .container .content > header {
+      margin: 0;
+      padding: 0;
+      height: 50px;
+      background-color: #ddd;
+      margin: 0 -190px;
+      display: flex;
+      align-items: center; }
+      .container .content > header .photo_title {
+        margin: 0;
+        padding: 0;
+        line-height: 100%;
+        padding-left: 10px; }
+    .container .content > .main {
+      float: left;
+      width: 100%;
+      margin-top: 5px;
+      min-height: 600px; }
+      .container .content > .main > header {
+        margin: 5px 0 0 5px;
+        overflow: hidden; }
+        .container .content > .main > header a {
+          position: relative;
+          display: inline-block;
+          background: #3388FF;
+          border-radius: 4px;
+          padding: 4px 12px;
+          overflow: hidden;
+          color: #fafafa;
+          text-decoration: none; }
+        .container .content > .main > header a > input {
+          position: absolute;
+          font-size: 100px;
+          right: 0;
+          top: 0;
+          opacity: 0; }
+        .container .content > .main > header a:hover {
+          background: #AADFFD;
+          border-color: #78C3F3;
+          color: #004974;
+          text-decoration: none; }
+      .container .content > .main > div {
+        display: flex;
+        padding-left: 5px;
+        flex-wrap: wrap;
+        min-height: 300px; }
+        .container .content > .main > div > div {
+          height: 106px;
+          max-width: 156px;
+          margin: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: flex-start;
+          position: relative; }
+          .container .content > .main > div > div > img:first-child {
+            padding: 3px;
+            border: 2px solid #ddd;
+            border-radius: 2px;
+            height: 100px;
+            min-width: 50px;
+            max-width: 150px;
+            margin: auto; }
+          .container .content > .main > div > div > img:last-child {
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            margin-left: 100%;
+            left: -15px;
+            top: 5px; }
+          .container .content > .main > div > div > .del_photo {
+            display: block; }
+          .container .content > .main > div > div > .del_hid {
+            display: none; }
+        .container .content > .main > div > .img_show {
+          display: inline-block; }
+        .container .content > .main > div > .img_hidden {
+          display: none; }
+      .container .content > .main > footer {
+        margin-top: 10px; }
+        .container .content > .main > footer .pagination_hid {
+          display: none; }
+        .container .content > .main > footer ul.pagination {
+          margin: 0;
+          padding: 0;
+          list-style: none; }
+          .container .content > .main > footer ul.pagination > li {
+            display: inline; }
+            .container .content > .main > footer ul.pagination > li a {
+              color: #333;
+              float: left;
+              padding: 8px 16px;
+              text-decoration: none;
+              transition: background-color .3s;
+              border: 1px solid #ddd; }
+            .container .content > .main > footer ul.pagination > li a.active {
+              background-color: #3388FF;
+              color: white;
+              border: 1px solid #3388FF; }
+            .container .content > .main > footer ul.pagination > li a:hover:not(.active) {
+              background-color: #ddd; }
+    .container .content .left {
+      float: left;
+      position: relative;
+      width: 170px;
+      margin-left: -100%;
+      left: -180px;
+      top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 2px; }
+      .container .content .left > div {
+        width: 100%;
+        height: 45px;
+        border: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-wrap: nowrap;
+        overflow: hidden; }
+        .container .content .left > div .def {
+          height: 20px;
+          width: 20px;
+          margin: 0 5px 0 10px; }
+        .container .content .left > div > span {
+          flex-grow: 2;
+          text-align: start;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden; }
+        .container .content .left > div .all {
+          display: none; }
+        .container .content .left > div .del {
+          height: 15px;
+          width: 15px;
+          margin-right: 10px; }

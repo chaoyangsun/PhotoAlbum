@@ -1,0 +1,231 @@
+$bg: rgb(250,250,250);
+$c: #3388FF;
+$c2: #ddd;
+$c3: #333;
+@mixin mx {
+  margin: 0;
+  padding: 0;
+}
+@mixin bgc {
+  $bg: mix($bg, #fff) !global;
+  background-color: $bg;
+}
+
+body {
+  background-color: $bg;
+  @include mx;
+}
+
+.container {
+  width: 95%;
+  min-height: 600px;
+  margin: auto;
+
+  > nav {
+    height: 50px;
+    overflow: hidden;
+
+    > a,
+    a:link,
+    a:visited {
+      display: inline-block;
+      line-height: 50px;
+      text-decoration: none;
+      padding: 0 10px;
+      color: $c;
+    }
+
+    a:hover {
+      font-weight: bold;
+    }
+
+    a.vis {
+      background-color: $c2;
+      color: $c3;
+    }
+  }
+
+  .content {
+    border: 1px solid $c2;
+    min-height: 600px;
+    padding: 0 30px 0 190px;
+    overflow: hidden;
+    min-width: 500px;
+
+    > header {
+      @include mx;
+      height: 50px;
+      background-color: $c2;
+      margin: 0 -190px;
+      display:flex;
+      align-items:center;
+
+      .photo_title {
+        @include mx;
+        line-height: 100%;
+        padding-left: 10px;
+      }
+    }
+
+    > .main {
+      float: left;
+      width: 100%;
+      margin-top: 5px;
+      min-height: 600px;
+      // background-color: #568;
+      > header {
+        margin: 5px 0 0 5px;
+        overflow: hidden;
+         a {
+          position: relative;
+          display: inline-block;
+          background: $c;
+          border-radius: 4px;
+          padding: 4px 12px;
+          overflow: hidden;
+          color: $bg;
+          text-decoration: none;
+        }
+
+          a > input {
+          position: absolute;
+          font-size: 100px;
+          right: 0;
+          top: 0;
+          opacity: 0;
+        }
+
+          a:hover {
+          background: #AADFFD;
+          border-color: #78C3F3;
+          color: #004974;
+          text-decoration: none;
+        }
+      }
+      > div{
+          display: flex;
+          padding-left: 5px;
+          flex-wrap: wrap;
+          min-height: 300px;
+        > div {
+          height: 106px;
+          // min-width: 56px;
+          max-width: 156px;
+          margin: 5px;
+          display: flex;
+          justify-content: center ;
+          align-items: center;
+          align-content: flex-start;
+          position: relative;
+        > img:first-child{
+          padding: 3px;
+          border: 2px solid $c2;
+          border-radius: 2px;
+          height: 100px;
+          min-width: 50px;
+          max-width: 150px;
+          margin: auto;
+          // align-self: center;
+        }
+        > img:last-child {
+          height: 15px;
+          width: 15px;
+          position: absolute;
+          margin-left: 100%;
+          left: -15px;
+          top: 5px;
+          }
+        > .del_photo{
+          display: block;
+        }
+        > .del_hid{
+          display: none;
+        }
+        }
+        > .img_show{
+          display:inline-block;
+        }
+        > .img_hidden{
+          display: none;
+        }
+      }
+      > footer{
+        margin-top: 10px;
+        .pagination_hid{
+          display: none;
+        }
+        ul.pagination {
+          // display: inline-block;
+          @include mx;
+          list-style: none;
+          > li{
+            display: inline;
+            a {
+               color: $c3;
+               float: left;
+               padding: 8px 16px;
+               text-decoration: none;
+               transition: background-color .3s;
+               border: 1px solid #ddd;
+            }
+            a.active {
+              background-color: $c;
+              color: white;
+              border: 1px solid $c;
+            }
+            a:hover:not(.active) {
+              background-color: $c2;
+            }
+          }
+          }
+      }
+    }
+
+    .left {
+      float: left;
+      position: relative;
+      width: 170px;
+      // min-height: 200px;
+      margin-left: -100%;
+      left: -180px;
+      top: 5px;
+      border: 1px solid $c2;
+      border-radius: 2px;
+
+      > div {
+        width: 100%;
+        height: 45px;
+        border: 1px solid $c2;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+
+        .def {
+          height: 20px;
+          width: 20px;
+          margin: 0 5px 0 10px;
+        }
+
+        > span {
+          flex-grow: 2;
+          text-align: start;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        .all {
+          display: none;
+        }
+
+        .del {
+          height: 15px;
+          width: 15px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
